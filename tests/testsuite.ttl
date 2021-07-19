@@ -1,0 +1,107 @@
+@prefix : <https://cogito.iot.linkeddata.es/tests/resource#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:    <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+
+
+
+:TestsuiteResource rdf:type <http://w3id.org/def/vtc#TestSuite>, owl:NamedIndividual;
+            dcterms:source "The COGITO Resource ontology".
+
+:Test1 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A resource is associated to a speed" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Resource subclassOf hasSpeed only float" .
+
+:Test2 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A location includes the accuracy of the measure" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;       
+       <https://w3id.org/def/vtc#desiredBehaviour> "LocationProperty subclassOf hasAccuracy only float" .
+
+:Test3 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A location also includes the time of the measure" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;             
+       <https://w3id.org/def/vtc#desiredBehaviour> "Measurement subclassOf hasTimestamp only datetime" .
+
+:Test4 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A location includes: altitude, longitude and latitude" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;           
+       <https://w3id.org/def/vtc#desiredBehaviour> "LocationProperty subclassOf hasLongitude only float" .
+
+:Test5 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A location includes: altitude, longitude and latitude" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;            
+       <https://w3id.org/def/vtc#desiredBehaviour> "LocationProperty subclassOf hasLatitude only float" .
+
+:Test6 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A location includes: altitude, longitude and latitude" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;            
+       <https://w3id.org/def/vtc#desiredBehaviour> "LocationProperty subclassOf hasAltitude only float" .
+
+:Test7 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A machine has a location" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;                     
+       <https://w3id.org/def/vtc#desiredBehaviour> "Equipment isLocatedIn SpatialThing" .
+
+:Test8 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A worker has a location" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;                    
+       <https://w3id.org/def/vtc#desiredBehaviour> "Worker isLocatedIn SpatialThing" .
+
+:Test9 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+         dc:description "A sensor measures the location" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;       
+       <https://w3id.org/def/vtc#desiredBehaviour> "Sensor relatesToProperty LocationProperty" .
+
+:Test10 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+        dc:description "A worker can execute an action" ;
+        <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;            
+       <https://w3id.org/def/vtc#desiredBehaviour> "Worker executes Action" .
+
+:Test11 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       dc:description "The material of a building is related to a property" ;
+       <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;          
+       <https://w3id.org/def/vtc#desiredBehaviour> "Material relatesToProperty core:Property" .
+
+:Test12 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       dc:description "A resource is a spatial thing" ;
+       <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;                   
+       <https://w3id.org/def/vtc#desiredBehaviour> "Resource isLocatedIn SpatialThing" .
+
+:Test13 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       dc:description "Resources includes: workers, equipment, materials" ;
+       <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;                       
+       <https://w3id.org/def/vtc#desiredBehaviour> "Material subclassOf Resource" .
+
+:Test14 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       dc:description "Resources includes: workers, equipment, materials" ;
+       <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;   
+       <https://w3id.org/def/vtc#desiredBehaviour> "Equipment subclassOf Resource" .
+
+:Test15 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       dc:description "Resources includes: workers, equipment, materials" ;
+       <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;   
+       <https://w3id.org/def/vtc#desiredBehaviour> "Worker subclassOf Resource" .
+
+:Test16 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       dc:description "The resources are allocated in a task" ;
+       <https://w3id.org/def/vtc#belongsTo> :TestsuiteResource;   
+       <https://w3id.org/def/vtc#desiredBehaviour> "Resource isAssignedtoTask Task" .
