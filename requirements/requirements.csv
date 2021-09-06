@@ -1,18 +1,12 @@
-Identifier (domain+id);Component;"Competency Question /
- Natural language sentence (fact)";Answer
-resource-1;WODM;A user is identified with a a passport;
-resource-2;WODM;A user performs a role;
-resource-3;WODM;Resources includes: workers, equipment, materials;
-resource-4;WODM;An equipment has a location;
-resource-5;WODM;An equipment has a status;
-resource-6;WODM;A worker can execute an action;
-resource-7;IoT data;A sensor measures the location;
-resource-8;IoT data;A worker has a location;
-resource-9;IoT data;A machine has a location;
-resource-10;IoT data;A location includes: altitude, longitude and latitude;
-resource-11;IoT data;A location also includes the time of the measure;
-resource-12;IoT data;A location includes the accuracy of the measure;
-resource-13;IoT data;A resource is associated to a speed;
-resource-14;PMS;The resources are allocated in a task;
-resource-15;PMS;Resources includes: workers, equipment, materials;
-resource-16;PMS;A resource is a spatial thing ;
+Identifier,Component,Competency Question/Assertion,Answer,Status
+resource-1,"PMS, WODM",Workers, equipment and materials are resources,
+resource-2,PMS,A resource is a spatial thing,
+resource-3,WODM,A resource has a location,
+resource-4,WODM,A worker has an identifier and a password,
+resource-5,WODM,A worker performs a role for a certain task,
+resource-6,WODM,A worker executes an action in a task,
+resource-7,WODM,A piece of equipment has a status,
+resource-8,IoT,A sensor measures the location,
+resource-9,IoT,A location includes: altitude, longitude and latitude,
+resource-10,IoT,A location also includes the time of the measure,
+resource-11,IoT,A location includes the accuracy of the measure,
