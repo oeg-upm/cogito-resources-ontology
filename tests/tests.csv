@@ -1,0 +1,18 @@
+Id,Requirement,Component,Test
+RESO-TEST-1,RESO-1,"PMS, WODM",Worker subclassOf Resource
+RESO-TEST-2,RESO-1,"PMS, WODM",Equipment subclassOf Resource
+RESO-TEST-3,RESO-1,"PMS, WODM",Material subclassOf Resource
+RESO-TEST-4,RESO-2,PMS,Resource subclassOf SpatialThing
+RESO-TEST-5,RESO-3,WODM,Resource hasLocation Point
+RESO-TEST-6,RESO-4,WODM,Worker hasIdentifier Literal
+RESO-TEST-7,RESO-5,WODM,Worker participatesInTask WorkerParticipation
+RESO-TEST-8,RESO-5,WODM,WorkerParticipation hasRole Role
+RESO-TEST-9,RESO-5,WODM,WorkerParticipation inTask Task
+RESO-TEST-10,RESO-6,WODM,WorkerParticipation executesAction Action
+RESO-TEST-11,RESO-7,WODM,Equipment hasStatus Status
+RESO-TEST-12,RESO-8,IoT,Sensor measures Location
+RESO-TEST-13,RESO-9,IoT,Location hasAltitude float
+RESO-TEST-14,RESO-9,IoT,Location hasLatitude float
+RESO-TEST-15,RESO-9,IoT,Location hasLongitude float
+RESO-TEST-16,RESO-10,IoT,Location hasTimestamp Datetime
+RESO-TEST-17,RESO-11,IoT,Location hasAccuracy Accuracy
