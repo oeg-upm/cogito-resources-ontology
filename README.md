@@ -4,4 +4,4 @@ This repository contains the code and documentation generated for the COGITO Res
 
 ## Current version of the ontology model
 
-![Current version of the model](https://github.com/oeg-upm/cogito-resources-ontology/blob/master/diagram/ontology.png "COGITO Resources ontology")
+![Current version of the model](https://github.com/oeg-upm/cogito-resources-ontology/blob/master/diagram/diagram.png "COGITO Resources ontology")
