@@ -12,6 +12,7 @@
                                                                                             "Socorro  Bernardos Galindo" ;
                                                   <http://purl.org/dc/elements/1.1/description> "The COGITO Resource ontology aims at modelling resources in the construction domain." ;
                                                   <http://purl.org/dc/elements/1.1/title> "Resource ontology" ;
+                                                  <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
                                                   owl:versionInfo "0.0.1" .
 
 #################################################################
@@ -28,6 +29,10 @@
 
 ###  http://purl.org/dc/elements/1.1/title
 <http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty .
 
 
 #################################################################

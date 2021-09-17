@@ -6,13 +6,15 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://cogito.iot.linkeddata.es/def/resource#">
         <dc:creator>Alba Fernández Izquierdo</dc:creator>
         <dc:creator>Raúl García Castro</dc:creator>
         <dc:creator>Socorro  Bernardos Galindo</dc:creator>
         <dc:description>The COGITO Resource ontology aims at modelling resources in the construction domain.</dc:description>
         <dc:title>Resource ontology</dc:title>
+        <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
         <owl:versionInfo>0.0.1</owl:versionInfo>
     </owl:Ontology>
     
@@ -48,6 +50,13 @@
 
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
 
 
