@@ -20,7 +20,7 @@
                                                   dc:description "The COGITO Resource ontology aims at modelling resources in the construction domain." ;
                                                   dc:title "Resource ontology" ;
                                                   <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> ;
-                                                  owl:versionInfo "0.0.1" .
+                                                  owl:versionInfo "0.2.0" .
 
 #################################################################
 #    Annotation properties
@@ -46,128 +46,59 @@ dc:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-###  https://cogito.iot.linkeddata.es/def/resource#executesForTask
-resource:executesForTask rdf:type owl:ObjectProperty ;
-                         rdfs:domain resource:WorkerInTask ;
-                         rdfs:range resource:Action ;
-                         rdfs:label "executes for task" .
+###  https://cogito.iot.linkeddata.es/def/resource#belongToType
+resource:belongToType rdf:type owl:ObjectProperty ;
+                      rdfs:label "belong to type" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#involvesResource
-resource:involvesResource rdf:type owl:ObjectProperty ;
-                          rdfs:domain process:Task ;
-                          rdfs:range resource:Resource ;
-                          rdfs:label "involves resource" .
+###  https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource
+resource:hasAssignedResource rdf:type owl:ObjectProperty ;
+                             rdfs:label "has assigned resource" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#isAssignedToTask
-resource:isAssignedToTask rdf:type owl:ObjectProperty ;
-                          rdfs:domain resource:Resource ;
-                          rdfs:label "is assigned to task" .
+###  https://cogito.iot.linkeddata.es/def/resource#hasResourceType
+resource:hasResourceType rdf:type owl:ObjectProperty ;
+                         rdfs:label "has resource type" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#measuredAt
-resource:measuredAt rdf:type owl:ObjectProperty ;
-                    rdfs:domain resource:LocationProperty ;
-                    rdfs:range time:Interval ;
-                    rdfs:label "measured at" .
-
-
-###  https://cogito.iot.linkeddata.es/def/resource#playsRole
-resource:playsRole rdf:type owl:ObjectProperty ;
-                   rdfs:domain resource:WorkerInTask ;
-                   rdfs:range resource:WorkerRole ;
-                   rdfs:label "plays role" .
-
-
-###  https://cogito.iot.linkeddata.es/def/resource#relatedTo
-resource:relatedTo rdf:type owl:ObjectProperty ;
-                   rdfs:range resource:WorkerInTask ;
-                   rdfs:label "related to" .
-
-
-###  https://saref.etsi.org/core#isPropertyOf
-saref:isPropertyOf rdf:type owl:ObjectProperty ;
-                   rdfs:domain resource:LocationProperty ;
-                   rdfs:range resource:Resource ;
-                   rdfs:label "is property of" .
-
-
-###  https://saref.etsi.org/core#relatesToProperty
-saref:relatesToProperty rdf:type owl:ObjectProperty ;
-                        rdfs:domain saref:Sensor ;
-                        rdfs:range saref:Property ;
-                        rdfs:label "relates to property" .
+###  https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag
+resource:hasTrackingTag rdf:type owl:ObjectProperty ;
+                        rdfs:label "has tracking tag" .
 
 
 #################################################################
 #    Data properties
 #################################################################
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
-geo:alt rdf:type owl:DatatypeProperty ;
-        rdfs:range xsd:float ;
-        rdfs:label "alt" .
+###  https://cogito.iot.linkeddata.es/def/process#name
+process:name rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:label "name" .
 
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
-geo:lat rdf:type owl:DatatypeProperty ;
-        rdfs:range xsd:float ;
-        rdfs:label "lat" .
+###  https://cogito.iot.linkeddata.es/def/resource#costPerHour
+resource:costPerHour rdf:type owl:DatatypeProperty ;
+                     rdfs:label "cost per hour" .
 
 
-###  http://www.w3.org/2003/01/geo/wgs84_pos#long
-geo:long rdf:type owl:DatatypeProperty ;
-         rdfs:range xsd:float ;
-         rdfs:label "long" .
+###  https://cogito.iot.linkeddata.es/def/resource#maxUnit
+resource:maxUnit rdf:type owl:DatatypeProperty ;
+                 rdfs:label "maximum number of units" .
 
 
-###  https://cogito.iot.linkeddata.es/def/process#hasCreationDate
-process:hasCreationDate rdf:type owl:DatatypeProperty ;
-                        rdfs:range xsd:dateTime ;
-                        rdfs:label "has creation date" .
+###  https://cogito.iot.linkeddata.es/def/resource#resourceId
+resource:resourceId rdf:type owl:DatatypeProperty ;
+                    rdfs:label "resource identifier" .
 
 
-###  https://cogito.iot.linkeddata.es/def/process#hasName
-process:hasName rdf:type owl:DatatypeProperty ;
-                rdfs:range xsd:string ;
-                rdfs:label "has name" .
+###  https://cogito.iot.linkeddata.es/def/resource#resourceTypeId
+resource:resourceTypeId rdf:type owl:DatatypeProperty ;
+                        rdfs:label "resource type identifier" .
 
 
-###  https://cogito.iot.linkeddata.es/def/process#hasPriority
-process:hasPriority rdf:type owl:DatatypeProperty ;
-                    rdfs:range xsd:integer ;
-                    rdfs:label "has priority" .
-
-
-###  https://cogito.iot.linkeddata.es/def/process#hasProgress
-process:hasProgress rdf:type owl:DatatypeProperty ;
-                    rdfs:range xsd:string ;
-                    rdfs:label "has progress" .
-
-
-###  https://cogito.iot.linkeddata.es/def/process#hasStatus
-process:hasStatus rdf:type owl:DatatypeProperty ;
-                  rdfs:range xsd:string ;
-                  rdfs:label "has status" .
-
-
-###  https://cogito.iot.linkeddata.es/def/resource#hasAccuracy
-resource:hasAccuracy rdf:type owl:DatatypeProperty ;
-                     rdfs:range xsd:float ;
-                     rdfs:label "has accuracy" .
-
-
-###  https://cogito.iot.linkeddata.es/def/resource#hasIdentifier
-resource:hasIdentifier rdf:type owl:DatatypeProperty ;
-                       rdfs:range xsd:string ;
-                       rdfs:label "has identifier" .
-
-
-###  https://cogito.iot.linkeddata.es/def/resource#hasStatus
-resource:hasStatus rdf:type owl:DatatypeProperty ;
-                   rdfs:range xsd:string ;
-                   rdfs:label "has status" .
+###  https://cogito.iot.linkeddata.es/def/resource#status
+resource:status rdf:type owl:DatatypeProperty ;
+                rdfs:label "status" .
 
 
 #################################################################
@@ -179,19 +110,14 @@ geo:SpatialThing rdf:type owl:Class ;
                  rdfs:label "Spatial Thing" .
 
 
-###  http://www.w3.org/2006/time#Interval
-time:Interval rdf:type owl:Class ;
-              rdfs:label "Interval" .
-
-
 ###  https://cogito.iot.linkeddata.es/def/process#Task
 process:Task rdf:type owl:Class ;
              rdfs:label "Task" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#Action
-resource:Action rdf:type owl:Class ;
-                rdfs:label "Action" .
+###  https://cogito.iot.linkeddata.es/def/process#WorkOrder
+process:WorkOrder rdf:type owl:Class ;
+                  rdfs:label "work order" .
 
 
 ###  https://cogito.iot.linkeddata.es/def/resource#Equipment
@@ -200,60 +126,67 @@ resource:Equipment rdf:type owl:Class ;
                    rdfs:label "Equipment" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#LocationProperty
-resource:LocationProperty rdf:type owl:Class ;
-                          rdfs:subClassOf saref:Property ;
-                          rdfs:label "Location Property" .
+###  https://cogito.iot.linkeddata.es/def/resource#EquipmentTag
+resource:EquipmentTag rdf:type owl:Class ;
+                      rdfs:subClassOf resource:TrackingTag ;
+                      rdfs:label "Equipment Tag" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#Material
-resource:Material rdf:type owl:Class ;
-                  rdfs:subClassOf resource:Resource ;
-                  rdfs:label "Material" .
+###  https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup
+resource:EquipmentTagGroup rdf:type owl:Class ;
+                           rdfs:subClassOf resource:TrackingTagGroup ;
+                           rdfs:label "equipment tag group" .
+
+
+###  https://cogito.iot.linkeddata.es/def/resource#EquipmentType
+resource:EquipmentType rdf:type owl:Class ;
+                       rdfs:subClassOf resource:ResourceType .
+
+
+###  https://cogito.iot.linkeddata.es/def/resource#HumanRole
+resource:HumanRole rdf:type owl:Class ;
+                   rdfs:subClassOf resource:ResourceType ;
+                   rdfs:label "human role" .
+
+
+###  https://cogito.iot.linkeddata.es/def/resource#HumanTag
+resource:HumanTag rdf:type owl:Class ;
+                  rdfs:subClassOf resource:TrackingTag ;
+                  rdfs:label "Human Tag" .
+
+
+###  https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup
+resource:HumanTagGroup rdf:type owl:Class ;
+                       rdfs:subClassOf resource:TrackingTagGroup ;
+                       rdfs:label "human tag group" .
+
+
+###  https://cogito.iot.linkeddata.es/def/resource#HumanWorker
+resource:HumanWorker rdf:type owl:Class ;
+                     rdfs:subClassOf resource:Resource ;
+                     rdfs:label "human worker" .
 
 
 ###  https://cogito.iot.linkeddata.es/def/resource#Resource
 resource:Resource rdf:type owl:Class ;
-                  rdfs:subClassOf geo:SpatialThing ,
-                                  saref:FeatureOfInterest ;
+                  rdfs:subClassOf geo:SpatialThing ;
                   rdfs:label "Resource" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#Worker
-resource:Worker rdf:type owl:Class ;
-                rdfs:subClassOf resource:Resource ;
-                rdfs:label "Worker" .
+###  https://cogito.iot.linkeddata.es/def/resource#ResourceType
+resource:ResourceType rdf:type owl:Class ;
+                      rdfs:label "resource type" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#WorkerInTask
-resource:WorkerInTask rdf:type owl:Class ;
-                      rdfs:label "Worker in Task" .
+###  https://cogito.iot.linkeddata.es/def/resource#TrackingTag
+resource:TrackingTag rdf:type owl:Class ;
+                     rdfs:subClassOf resource:Resource ;
+                     rdfs:label "tracking tag" .
 
 
-###  https://cogito.iot.linkeddata.es/def/resource#WorkerRole
-resource:WorkerRole rdf:type owl:Class ;
-                    rdfs:label "Worker Role" .
-
-
-###  https://saref.etsi.org/core#FeatureOfInterest
-saref:FeatureOfInterest rdf:type owl:Class ;
-                        rdfs:label "Feature of Interest" .
-
-
-###  https://saref.etsi.org/core#IMUSensor
-saref:IMUSensor rdf:type owl:Class ;
-                rdfs:subClassOf saref:Sensor ;
-                rdfs:label "IMU Sensor" .
-
-
-###  https://saref.etsi.org/core#Property
-saref:Property rdf:type owl:Class ;
-               rdfs:label "Property" .
-
-
-###  https://saref.etsi.org/core#Sensor
-saref:Sensor rdf:type owl:Class ;
-             rdfs:label "Sensor" .
+###  https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup
+resource:TrackingTagGroup rdf:type owl:Class ;
+                          rdfs:subClassOf resource:ResourceType .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

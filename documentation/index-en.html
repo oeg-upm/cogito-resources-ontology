@@ -6,7 +6,7 @@
 
 
 <!-- SCHEMA.ORG METADATA -->
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://cogito.iot.linkeddata.es/def/resource#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://cogito.iot.linkeddata.es/def/resource#","name":"Resource ontology", "headline":"The COGITO Resource ontology aims at modelling resources in the construction domain.", "datePublished":"Fri Sep 17 12:22:00 CEST 2021", "version":"0.0.1", "license":"http://purl.org/NET/rdflicense/cc-by4.0", "author":[{"@type":"Person","name":"Alba Fernández Izquierdo"},{"@type":"Person","name":"Raúl García Castro"},{"@type":"Person","name":"Socorro  Bernardos Galindo"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://cogito.iot.linkeddata.es/def/resource#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://cogito.iot.linkeddata.es/def/resource#","name":"Resource ontology", "headline":"The COGITO Quality ontology aims at modelling the construction quality domain.", "datePublished":"Fri Apr 15 15:23:15 CEST 2022", "version":"0.2.0", "license":"http://purl.org/NET/rdflicense/cc-by4.0", "author":[{"@type":"Person","name":"Alba Fernández Izquierdo"},{"@type":"Person","name":"Raúl García Castro"},{"@type":"Person","name":"Socorro  Bernardos Galindo"}]}</script>
 
 <script src="resources/jquery.js"></script> 
 <script src="resources/marked.min.js"></script> 
@@ -61,13 +61,13 @@ $(function(){
 <dt>Latest version:</dt>
 <dd><a href="https://cogito.iot.linkeddata.es/def/resource#">https://cogito.iot.linkeddata.es/def/resource#</a></dd>
 <dt>Revision:</dt>
-<dd>0.0.1</dd>
+<dd>0.2.0</dd>
 <dt>Authors:</dt>
 <dd>Alba Fernández Izquierdo</dd><dd>Raúl García Castro</dd><dd>Socorro  Bernardos Galindo</dd>
 
 <dt>Download serialization:</dt><dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.rdf" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd><dt>License: </dt><dd><a href="http://purl.org/NET/rdflicense/cc-by4.0" target="_blank"><img src="https://img.shields.io/badge/License-http://purl.org/NET/rdflicense/cc_by4.0-blue.svg" alt="http://purl.org/NET/rdflicense/cc-by4.0" /></a>
 </dd><!-- <dt>Evaluation:</dt><dd><a href="OOPSEvaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd> --><dt>Cite as:</dt>
-<dd>Alba Fernández Izquierdo,Raúl García Castro,Socorro  Bernardos Galindo. Resource ontology. Revision: 0.0.1.</dd>
+<dd>Alba Fernández Izquierdo,Raúl García Castro,Socorro  Bernardos Galindo. Resource ontology. Revision: 0.2.0.</dd>
 </dl>
 
 <hr/>
@@ -77,14 +77,14 @@ $(function(){
 <span>Ontology Specification Draft</span>
 </div>
 </div>     <div id="abstract"><h2>Abstract</h2><span class="markdown">
-The COGITO Resource ontology aims at modelling resources in the construction domain.</span>
+The Resource ontology aims at modelling the resources in the construction domain.</span>
 </div>
 <div id="toc"></div> 
 
 <!--INTRODUCTION SECTION-->
     <div id="introduction"><h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
 <span class="markdown">
-This document describes the results of the resource ontology for the COGITO project.</span>
+This document describes the results of the Resource ontology for the COGITO project.</span>
 <div id="namespacedeclarations">
 <h3 id="ns" class="list">Namespace declarations</h3>
 <div id="ns" align="center">
@@ -119,39 +119,46 @@ This ontology has the following classes and properties.</span>
 <h4>Classes</h4>
 <ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#Action"
-         title="https://cogito.iot.linkeddata.es/def/resource#Action">Action</a>
-   </li>
-   <li>
       <a href="#Equipment"
          title="https://cogito.iot.linkeddata.es/def/resource#Equipment">Equipment</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/core#FeatureOfInterest" title="https://saref.etsi.org/core#FeatureOfInterest">Feature of Interest</a>
+      <a href="#EquipmentTag"
+         title="https://cogito.iot.linkeddata.es/def/resource#EquipmentTag">Equipment Tag</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/core#IMUSensor" title="https://saref.etsi.org/core#IMUSensor">IMU Sensor</a>
+      <a href="#EquipmentTagGroup"
+         title="https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup">equipment tag group</a>
    </li>
    <li>
-      <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Interval</a>
+      <a href="#EquipmentType"
+         title="https://cogito.iot.linkeddata.es/def/resource#EquipmentType">
+         <span>equipment type</span>
+      </a>
    </li>
    <li>
-      <a href="#LocationProperty"
-         title="https://cogito.iot.linkeddata.es/def/resource#LocationProperty">Location Property</a>
+      <a href="#HumanRole"
+         title="https://cogito.iot.linkeddata.es/def/resource#HumanRole">human role</a>
    </li>
    <li>
-      <a href="#Material"
-         title="https://cogito.iot.linkeddata.es/def/resource#Material">Material</a>
+      <a href="#HumanTag"
+         title="https://cogito.iot.linkeddata.es/def/resource#HumanTag">Human Tag</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/core#Property" title="https://saref.etsi.org/core#Property">Property</a>
+      <a href="#HumanTagGroup"
+         title="https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup">human tag group</a>
+   </li>
+   <li>
+      <a href="#HumanWorker"
+         title="https://cogito.iot.linkeddata.es/def/resource#HumanWorker">human worker</a>
    </li>
    <li>
       <a href="#Resource"
          title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/core#Sensor" title="https://saref.etsi.org/core#Sensor">Sensor</a>
+      <a href="#ResourceType"
+         title="https://cogito.iot.linkeddata.es/def/resource#ResourceType">resource type</a>
    </li>
    <li>
       <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
@@ -162,89 +169,59 @@ This ontology has the following classes and properties.</span>
          title="https://cogito.iot.linkeddata.es/def/process#Task">Task</a>
    </li>
    <li>
-      <a href="#Worker"
-         title="https://cogito.iot.linkeddata.es/def/resource#Worker">Worker</a>
+      <a href="#TrackingTag"
+         title="https://cogito.iot.linkeddata.es/def/resource#TrackingTag">tracking tag</a>
    </li>
    <li>
-      <a href="#WorkerInTask"
-         title="https://cogito.iot.linkeddata.es/def/resource#WorkerInTask">Worker in Task</a>
+      <a href="#TrackingTagGroup"
+         title="https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup">
+         <span>tracking tag group</span>
+      </a>
    </li>
    <li>
-      <a href="#WorkerRole"
-         title="https://cogito.iot.linkeddata.es/def/resource#WorkerRole">Worker Role</a>
+      <a href="#https://cogito.iot.linkeddata.es/def/process#WorkOrder"
+         title="https://cogito.iot.linkeddata.es/def/process#WorkOrder">work order</a>
    </li>
 </ul><h4>Object Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#executesForTask"
-         title="https://cogito.iot.linkeddata.es/def/resource#executesForTask">executes for task</a>
+      <a href="#belongToType"
+         title="https://cogito.iot.linkeddata.es/def/resource#belongToType">belong to type</a>
    </li>
    <li>
-      <a href="#involvesResource"
-         title="https://cogito.iot.linkeddata.es/def/resource#involvesResource">involves resource</a>
+      <a href="#hasAssignedResource"
+         title="https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource">has assigned resource</a>
    </li>
    <li>
-      <a href="#isAssignedToTask"
-         title="https://cogito.iot.linkeddata.es/def/resource#isAssignedToTask">is assigned to task</a>
+      <a href="#hasResourceType"
+         title="https://cogito.iot.linkeddata.es/def/resource#hasResourceType">has resource type</a>
    </li>
    <li>
-      <a href="#https://saref.etsi.org/core#isPropertyOf" title="https://saref.etsi.org/core#isPropertyOf">is property of</a>
-   </li>
-   <li>
-      <a href="#measuredAt"
-         title="https://cogito.iot.linkeddata.es/def/resource#measuredAt">measured at</a>
-   </li>
-   <li>
-      <a href="#playsRole"
-         title="https://cogito.iot.linkeddata.es/def/resource#playsRole">plays role</a>
-   </li>
-   <li>
-      <a href="#relatedTo"
-         title="https://cogito.iot.linkeddata.es/def/resource#relatedTo">related to</a>
-   </li>
-   <li>
-      <a href="#https://saref.etsi.org/core#relatesToProperty" title="https://saref.etsi.org/core#relatesToProperty">relates to property</a>
+      <a href="#hasTrackingTag"
+         title="https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag">has tracking tag</a>
    </li>
 </ul><h4>Data Properties</h4><ul xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
    <li>
-      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#alt" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">alt</a>
+      <a href="#costPerHour"
+         title="https://cogito.iot.linkeddata.es/def/resource#costPerHour">cost per hour</a>
    </li>
    <li>
-      <a href="#hasAccuracy"
-         title="https://cogito.iot.linkeddata.es/def/resource#hasAccuracy">has accuracy</a>
+      <a href="#maxUnit"
+         title="https://cogito.iot.linkeddata.es/def/resource#maxUnit">maximum number of units</a>
    </li>
    <li>
-      <a href="#https://cogito.iot.linkeddata.es/def/process#hasCreationDate"
-         title="https://cogito.iot.linkeddata.es/def/process#hasCreationDate">has creation date</a>
+      <a href="#https://cogito.iot.linkeddata.es/def/process#name" title="https://cogito.iot.linkeddata.es/def/process#name">name</a>
    </li>
    <li>
-      <a href="#hasIdentifier"
-         title="https://cogito.iot.linkeddata.es/def/resource#hasIdentifier">has identifier</a>
+      <a href="#resourceId"
+         title="https://cogito.iot.linkeddata.es/def/resource#resourceId">resource identifier</a>
    </li>
    <li>
-      <a href="#https://cogito.iot.linkeddata.es/def/process#hasName"
-         title="https://cogito.iot.linkeddata.es/def/process#hasName">has name</a>
+      <a href="#resourceTypeId"
+         title="https://cogito.iot.linkeddata.es/def/resource#resourceTypeId">resource type identifier</a>
    </li>
    <li>
-      <a href="#https://cogito.iot.linkeddata.es/def/process#hasPriority"
-         title="https://cogito.iot.linkeddata.es/def/process#hasPriority">has priority</a>
-   </li>
-   <li>
-      <a href="#https://cogito.iot.linkeddata.es/def/process#hasProgress"
-         title="https://cogito.iot.linkeddata.es/def/process#hasProgress">has progress</a>
-   </li>
-   <li>
-      <a href="#https://cogito.iot.linkeddata.es/def/process#hasStatus"
-         title="https://cogito.iot.linkeddata.es/def/process#hasStatus">has status</a>
-   </li>
-   <li>
-      <a href="#hasStatus"
-         title="https://cogito.iot.linkeddata.es/def/resource#hasStatus">has status</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">lat</a>
-   </li>
-   <li>
-      <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">long</a>
+      <a href="#status"
+         title="https://cogito.iot.linkeddata.es/def/resource#status">status</a>
    </li>
 </ul>
 </div>
@@ -255,7 +232,6 @@ This ontology has the following classes and properties.</span>
 <span class="markdown">
 The following diagram reflects how the classes of the ontology are related.</span>
 <center><img src="resources/images/diagram.png" alt="General overview of the COGITO resource ontology." width="90%">  </center>
-
 </div>
    
 
@@ -266,39 +242,46 @@ This section provides details for each class and property defined by Resource on
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
-         <a href="#Action"
-            title="https://cogito.iot.linkeddata.es/def/resource#Action">Action</a>
-      </li>
-      <li>
          <a href="#Equipment"
             title="https://cogito.iot.linkeddata.es/def/resource#Equipment">Equipment</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core#FeatureOfInterest" title="https://saref.etsi.org/core#FeatureOfInterest">Feature of Interest</a>
+         <a href="#EquipmentTag"
+            title="https://cogito.iot.linkeddata.es/def/resource#EquipmentTag">Equipment Tag</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core#IMUSensor" title="https://saref.etsi.org/core#IMUSensor">IMU Sensor</a>
+         <a href="#EquipmentTagGroup"
+            title="https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup">equipment tag group</a>
       </li>
       <li>
-         <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Interval</a>
+         <a href="#EquipmentType"
+            title="https://cogito.iot.linkeddata.es/def/resource#EquipmentType">
+            <span>equipment type</span>
+         </a>
       </li>
       <li>
-         <a href="#LocationProperty"
-            title="https://cogito.iot.linkeddata.es/def/resource#LocationProperty">Location Property</a>
+         <a href="#HumanRole"
+            title="https://cogito.iot.linkeddata.es/def/resource#HumanRole">human role</a>
       </li>
       <li>
-         <a href="#Material"
-            title="https://cogito.iot.linkeddata.es/def/resource#Material">Material</a>
+         <a href="#HumanTag"
+            title="https://cogito.iot.linkeddata.es/def/resource#HumanTag">Human Tag</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core#Property" title="https://saref.etsi.org/core#Property">Property</a>
+         <a href="#HumanTagGroup"
+            title="https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup">human tag group</a>
+      </li>
+      <li>
+         <a href="#HumanWorker"
+            title="https://cogito.iot.linkeddata.es/def/resource#HumanWorker">human worker</a>
       </li>
       <li>
          <a href="#Resource"
             title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core#Sensor" title="https://saref.etsi.org/core#Sensor">Sensor</a>
+         <a href="#ResourceType"
+            title="https://cogito.iot.linkeddata.es/def/resource#ResourceType">resource type</a>
       </li>
       <li>
          <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
@@ -309,34 +292,20 @@ This section provides details for each class and property defined by Resource on
             title="https://cogito.iot.linkeddata.es/def/process#Task">Task</a>
       </li>
       <li>
-         <a href="#Worker"
-            title="https://cogito.iot.linkeddata.es/def/resource#Worker">Worker</a>
+         <a href="#TrackingTag"
+            title="https://cogito.iot.linkeddata.es/def/resource#TrackingTag">tracking tag</a>
       </li>
       <li>
-         <a href="#WorkerInTask"
-            title="https://cogito.iot.linkeddata.es/def/resource#WorkerInTask">Worker in Task</a>
+         <a href="#TrackingTagGroup"
+            title="https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup">
+            <span>tracking tag group</span>
+         </a>
       </li>
       <li>
-         <a href="#WorkerRole"
-            title="https://cogito.iot.linkeddata.es/def/resource#WorkerRole">Worker Role</a>
+         <a href="#https://cogito.iot.linkeddata.es/def/process#WorkOrder"
+            title="https://cogito.iot.linkeddata.es/def/process#WorkOrder">work order</a>
       </li>
    </ul>
-   <div class="entity" id="Action">
-      <h3>Action<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#Action</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#executesForTask"
-               title="https://cogito.iot.linkeddata.es/def/resource#executesForTask">executes for task</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
    <div class="entity" id="Equipment">
       <h3>Equipment<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -353,109 +322,115 @@ This section provides details for each class and property defined by Resource on
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core#FeatureOfInterest">
-      <h3>Feature of Interest<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="EquipmentTag">
+      <h3>Equipment Tag<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core#FeatureOfInterest</p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#EquipmentTag</p>
       <dl class="description">
-         <dt>has sub-classes</dt>
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TrackingTag"
+               title="https://cogito.iot.linkeddata.es/def/resource#TrackingTag">tracking tag</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EquipmentTagGroup">
+      <h3>equipment tag group<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TrackingTagGroup"
+               title="https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup">tracking tag group</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="EquipmentType">
+      <h3>equipment type<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#EquipmentType</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ResourceType"
+               title="https://cogito.iot.linkeddata.es/def/resource#ResourceType">resource type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HumanRole">
+      <h3>human role<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#HumanRole</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#ResourceType"
+               title="https://cogito.iot.linkeddata.es/def/resource#ResourceType">resource type</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HumanTag">
+      <h3>Human Tag<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#HumanTag</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TrackingTag"
+               title="https://cogito.iot.linkeddata.es/def/resource#TrackingTag">tracking tag</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HumanTagGroup">
+      <h3>human tag group<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#TrackingTagGroup"
+               title="https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup">tracking tag group</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="HumanWorker">
+      <h3>human worker<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#HumanWorker</p>
+      <dl class="description">
+         <dt>has super-classes</dt>
          <dd>
             <a href="#Resource"
                title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://saref.etsi.org/core#IMUSensor">
-      <h3>IMU Sensor<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core#IMUSensor</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://saref.etsi.org/core#Sensor" title="https://saref.etsi.org/core#Sensor">Sensor</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://www.w3.org/2006/time#Interval">
-      <h3>Interval<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2006/time#Interval</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#measuredAt"
-               title="https://cogito.iot.linkeddata.es/def/resource#measuredAt">measured at</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="LocationProperty">
-      <h3>Location Property<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#LocationProperty</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#https://saref.etsi.org/core#Property" title="https://saref.etsi.org/core#Property">Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://saref.etsi.org/core#isPropertyOf" title="https://saref.etsi.org/core#isPropertyOf">is property of</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#measuredAt"
-               title="https://cogito.iot.linkeddata.es/def/resource#measuredAt">measured at</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="Material">
-      <h3>Material<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#Material</p>
-      <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#Resource"
-               title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="https://saref.etsi.org/core#Property">
-      <h3>Property<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core#Property</p>
-      <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#LocationProperty"
-               title="https://cogito.iot.linkeddata.es/def/resource#LocationProperty">Location Property</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#https://saref.etsi.org/core#relatesToProperty" title="https://saref.etsi.org/core#relatesToProperty">relates to property</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -469,8 +444,7 @@ This section provides details for each class and property defined by Resource on
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core#FeatureOfInterest" title="https://saref.etsi.org/core#FeatureOfInterest">Feature of Interest</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+            <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
                title="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">Spatial Thing</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -478,44 +452,31 @@ This section provides details for each class and property defined by Resource on
          <dd>
             <a href="#Equipment"
                title="https://cogito.iot.linkeddata.es/def/resource#Equipment">Equipment</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Material"
-               title="https://cogito.iot.linkeddata.es/def/resource#Material">Material</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Worker"
-               title="https://cogito.iot.linkeddata.es/def/resource#Worker">Worker</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HumanWorker"
+               title="https://cogito.iot.linkeddata.es/def/resource#HumanWorker">human worker</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TrackingTag"
+               title="https://cogito.iot.linkeddata.es/def/resource#TrackingTag">tracking tag</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#isAssignedToTask"
-               title="https://cogito.iot.linkeddata.es/def/resource#isAssignedToTask">is assigned to task</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#involvesResource"
-               title="https://cogito.iot.linkeddata.es/def/resource#involvesResource">involves resource</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#https://saref.etsi.org/core#isPropertyOf" title="https://saref.etsi.org/core#isPropertyOf">is property of</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core#Sensor">
-      <h3>Sensor<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="ResourceType">
+      <h3>resource type<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core#Sensor</p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#ResourceType</p>
       <dl class="description">
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://saref.etsi.org/core#IMUSensor" title="https://saref.etsi.org/core#IMUSensor">IMU Sensor</a>
+            <a href="#EquipmentType"
+               title="https://cogito.iot.linkeddata.es/def/resource#EquipmentType">equipment type</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HumanRole"
+               title="https://cogito.iot.linkeddata.es/def/resource#HumanRole">human role</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#TrackingTagGroup"
+               title="https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup">tracking tag group</a>
             <sup class="type-c" title="class">c</sup>
-         </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#https://saref.etsi.org/core#relatesToProperty" title="https://saref.etsi.org/core#relatesToProperty">relates to property</a>
-            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -542,22 +503,14 @@ This section provides details for each class and property defined by Resource on
       </h3>
       <p>
          <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#Task</p>
-      <dl class="description">
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#involvesResource"
-               title="https://cogito.iot.linkeddata.es/def/resource#involvesResource">involves resource</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
    </div>
-   <div class="entity" id="Worker">
-      <h3>Worker<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="TrackingTag">
+      <h3>tracking tag<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#Worker</p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#TrackingTag</p>
       <dl class="description">
          <dt>has super-classes</dt>
          <dd>
@@ -565,365 +518,150 @@ This section provides details for each class and property defined by Resource on
                title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#EquipmentTag"
+               title="https://cogito.iot.linkeddata.es/def/resource#EquipmentTag">Equipment Tag</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HumanTag"
+               title="https://cogito.iot.linkeddata.es/def/resource#HumanTag">Human Tag</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
       </dl>
    </div>
-   <div class="entity" id="WorkerInTask">
-      <h3>Worker in Task<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="TrackingTagGroup">
+      <h3>tracking tag group<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#WorkerInTask</p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup</p>
       <dl class="description">
-         <dt>is in domain of</dt>
+         <dt>has super-classes</dt>
          <dd>
-            <a href="#executesForTask"
-               title="https://cogito.iot.linkeddata.es/def/resource#executesForTask">executes for task</a>
-            <sup class="type-op" title="object property">op</sup>, <a href="#playsRole"
-               title="https://cogito.iot.linkeddata.es/def/resource#playsRole">plays role</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#ResourceType"
+               title="https://cogito.iot.linkeddata.es/def/resource#ResourceType">resource type</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in range of</dt>
+         <dt>has sub-classes</dt>
          <dd>
-            <a href="#relatedTo"
-               title="https://cogito.iot.linkeddata.es/def/resource#relatedTo">related to</a>
-            <sup class="type-op" title="object property">op</sup>
+            <a href="#EquipmentTagGroup"
+               title="https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup">equipment tag group</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#HumanTagGroup"
+               title="https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup">human tag group</a>
+            <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
    </div>
-   <div class="entity" id="WorkerRole">
-      <h3>Worker Role<sup class="type-c" title="class">c</sup>
+   <div class="entity" id="https://cogito.iot.linkeddata.es/def/process#WorkOrder">
+      <h3>work order<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#WorkerRole</p>
-      <dl class="description">
-         <dt>is in range of</dt>
-         <dd>
-            <a href="#playsRole"
-               title="https://cogito.iot.linkeddata.es/def/resource#playsRole">plays role</a>
-            <sup class="type-op" title="object property">op</sup>
-         </dd>
-      </dl>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#WorkOrder</p>
    </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#executesForTask"
-            title="https://cogito.iot.linkeddata.es/def/resource#executesForTask">executes for task</a>
+         <a href="#belongToType"
+            title="https://cogito.iot.linkeddata.es/def/resource#belongToType">belong to type</a>
       </li>
       <li>
-         <a href="#involvesResource"
-            title="https://cogito.iot.linkeddata.es/def/resource#involvesResource">involves resource</a>
+         <a href="#hasAssignedResource"
+            title="https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource">has assigned resource</a>
       </li>
       <li>
-         <a href="#isAssignedToTask"
-            title="https://cogito.iot.linkeddata.es/def/resource#isAssignedToTask">is assigned to task</a>
+         <a href="#hasResourceType"
+            title="https://cogito.iot.linkeddata.es/def/resource#hasResourceType">has resource type</a>
       </li>
       <li>
-         <a href="#https://saref.etsi.org/core#isPropertyOf" title="https://saref.etsi.org/core#isPropertyOf">is property of</a>
-      </li>
-      <li>
-         <a href="#measuredAt"
-            title="https://cogito.iot.linkeddata.es/def/resource#measuredAt">measured at</a>
-      </li>
-      <li>
-         <a href="#playsRole"
-            title="https://cogito.iot.linkeddata.es/def/resource#playsRole">plays role</a>
-      </li>
-      <li>
-         <a href="#relatedTo"
-            title="https://cogito.iot.linkeddata.es/def/resource#relatedTo">related to</a>
-      </li>
-      <li>
-         <a href="#https://saref.etsi.org/core#relatesToProperty" title="https://saref.etsi.org/core#relatesToProperty">relates to property</a>
+         <a href="#hasTrackingTag"
+            title="https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag">has tracking tag</a>
       </li>
    </ul>
-   <div class="entity" id="executesForTask">
-      <h3>executes for task<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="belongToType">
+      <h3>belong to type<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#executesForTask</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#WorkerInTask"
-                  title="https://cogito.iot.linkeddata.es/def/resource#WorkerInTask">Worker in Task</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Action"
-                  title="https://cogito.iot.linkeddata.es/def/resource#Action">Action</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#belongToType</p>
    </div>
-   <div class="entity" id="involvesResource">
-      <h3>involves resource<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasAssignedResource">
+      <h3>has assigned resource<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#involvesResource</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://cogito.iot.linkeddata.es/def/process#Task"
-                  title="https://cogito.iot.linkeddata.es/def/process#Task">Task</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Resource"
-                  title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource</p>
    </div>
-   <div class="entity" id="isAssignedToTask">
-      <h3>is assigned to task<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasResourceType">
+      <h3>has resource type<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#isAssignedToTask</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Resource"
-                  title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#hasResourceType</p>
    </div>
-   <div class="entity" id="https://saref.etsi.org/core#isPropertyOf">
-      <h3>is property of<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="hasTrackingTag">
+      <h3>has tracking tag<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core#isPropertyOf</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#LocationProperty"
-                  title="https://cogito.iot.linkeddata.es/def/resource#LocationProperty">Location Property</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#Resource"
-                  title="https://cogito.iot.linkeddata.es/def/resource#Resource">Resource</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="measuredAt">
-      <h3>measured at<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#measuredAt</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#LocationProperty"
-                  title="https://cogito.iot.linkeddata.es/def/resource#LocationProperty">Location Property</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#http://www.w3.org/2006/time#Interval" title="http://www.w3.org/2006/time#Interval">Interval</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="playsRole">
-      <h3>plays role<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#playsRole</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#WorkerInTask"
-                  title="https://cogito.iot.linkeddata.es/def/resource#WorkerInTask">Worker in Task</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#WorkerRole"
-                  title="https://cogito.iot.linkeddata.es/def/resource#WorkerRole">Worker Role</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="relatedTo">
-      <h3>related to<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#relatedTo</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="#WorkerInTask"
-                  title="https://cogito.iot.linkeddata.es/def/resource#WorkerInTask">Worker in Task</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://saref.etsi.org/core#relatesToProperty">
-      <h3>relates to property<sup class="type-op" title="object property">op</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://saref.etsi.org/core#relatesToProperty</p>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#https://saref.etsi.org/core#Sensor" title="https://saref.etsi.org/core#Sensor">Sensor</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-            <dt>has range</dt>
-            <dd>
-               <a href="#https://saref.etsi.org/core#Property" title="https://saref.etsi.org/core#Property">Property</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag</p>
    </div>
 </div><div xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#alt" title="http://www.w3.org/2003/01/geo/wgs84_pos#alt">alt</a>
+         <a href="#costPerHour"
+            title="https://cogito.iot.linkeddata.es/def/resource#costPerHour">cost per hour</a>
       </li>
       <li>
-         <a href="#hasAccuracy"
-            title="https://cogito.iot.linkeddata.es/def/resource#hasAccuracy">has accuracy</a>
+         <a href="#maxUnit"
+            title="https://cogito.iot.linkeddata.es/def/resource#maxUnit">maximum number of units</a>
       </li>
       <li>
-         <a href="#https://cogito.iot.linkeddata.es/def/process#hasCreationDate"
-            title="https://cogito.iot.linkeddata.es/def/process#hasCreationDate">has creation date</a>
+         <a href="#https://cogito.iot.linkeddata.es/def/process#name" title="https://cogito.iot.linkeddata.es/def/process#name">name</a>
       </li>
       <li>
-         <a href="#hasIdentifier"
-            title="https://cogito.iot.linkeddata.es/def/resource#hasIdentifier">has identifier</a>
+         <a href="#resourceId"
+            title="https://cogito.iot.linkeddata.es/def/resource#resourceId">resource identifier</a>
       </li>
       <li>
-         <a href="#https://cogito.iot.linkeddata.es/def/process#hasName"
-            title="https://cogito.iot.linkeddata.es/def/process#hasName">has name</a>
+         <a href="#resourceTypeId"
+            title="https://cogito.iot.linkeddata.es/def/resource#resourceTypeId">resource type identifier</a>
       </li>
       <li>
-         <a href="#https://cogito.iot.linkeddata.es/def/process#hasPriority"
-            title="https://cogito.iot.linkeddata.es/def/process#hasPriority">has priority</a>
-      </li>
-      <li>
-         <a href="#https://cogito.iot.linkeddata.es/def/process#hasProgress"
-            title="https://cogito.iot.linkeddata.es/def/process#hasProgress">has progress</a>
-      </li>
-      <li>
-         <a href="#https://cogito.iot.linkeddata.es/def/process#hasStatus"
-            title="https://cogito.iot.linkeddata.es/def/process#hasStatus">has status</a>
-      </li>
-      <li>
-         <a href="#hasStatus"
-            title="https://cogito.iot.linkeddata.es/def/resource#hasStatus">has status</a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">lat</a>
-      </li>
-      <li>
-         <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">long</a>
+         <a href="#status"
+            title="https://cogito.iot.linkeddata.es/def/resource#status">status</a>
       </li>
    </ul>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
-      <h3>alt<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="costPerHour">
+      <h3>cost per hour<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#alt</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#float"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#costPerHour</p>
    </div>
-   <div class="entity" id="hasAccuracy">
-      <h3>has accuracy<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="maxUnit">
+      <h3>maximum number of units<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#hasAccuracy</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#float"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#maxUnit</p>
    </div>
-   <div class="entity" id="https://cogito.iot.linkeddata.es/def/process#hasCreationDate">
-      <h3>has creation date<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="https://cogito.iot.linkeddata.es/def/process#name">
+      <h3>name<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#hasCreationDate</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#dateTime"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#dateTime">date time</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasIdentifier">
-      <h3>has identifier<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#hasIdentifier</p>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#name</p>
       <div class="description">
          <dl>
             <dt>has range</dt>
@@ -935,131 +673,29 @@ This section provides details for each class and property defined by Resource on
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://cogito.iot.linkeddata.es/def/process#hasName">
-      <h3>has name<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="resourceId">
+      <h3>resource identifier<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#hasName</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#resourceId</p>
    </div>
-   <div class="entity" id="https://cogito.iot.linkeddata.es/def/process#hasPriority">
-      <h3>has priority<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="resourceTypeId">
+      <h3>resource type identifier<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#hasPriority</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#integer"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#integer">integer</a>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#resourceTypeId</p>
    </div>
-   <div class="entity" id="https://cogito.iot.linkeddata.es/def/process#hasProgress">
-      <h3>has progress<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="status">
+      <h3>status<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#hasProgress</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="https://cogito.iot.linkeddata.es/def/process#hasStatus">
-      <h3>has status<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/process#hasStatus</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasStatus">
-      <h3>has status<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#hasStatus</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#string"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#string">string</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
-      <h3>lat<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#lat</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#float"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#long">
-      <h3>long<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#long</p>
-      <div class="description">
-         <dl>
-            <dt>has range</dt>
-            <dd>
-               <a href="http://www.w3.org/2001/XMLSchema#float"
-                  target="_blank"
-                  title="http://www.w3.org/2001/XMLSchema#float">float</a>
-            </dd>
-         </dl>
-      </div>
+         <strong>IRI:</strong> https://cogito.iot.linkeddata.es/def/resource#status</p>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>

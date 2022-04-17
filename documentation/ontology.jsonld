@@ -17,85 +17,22 @@
     "@value" : "Spatial Thing"
   } ]
 }, {
-  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "alt"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#lat",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "lat"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#long",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "long"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://www.w3.org/2006/time#Interval",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Interval"
-  } ]
-}, {
   "@id" : "https://cogito.iot.linkeddata.es/def/process#Task",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Task"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasCreationDate",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "@id" : "https://cogito.iot.linkeddata.es/def/process#WorkOrder",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has creation date"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#dateTime"
+    "@value" : "work order"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasName",
+  "@id" : "https://cogito.iot.linkeddata.es/def/process#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has name"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasPriority",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has priority"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasProgress",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has progress"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has status"
+    "@value" : "name"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -120,13 +57,7 @@
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.1"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#Action",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Action"
+    "@value" : "0.2.0"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#Equipment",
@@ -138,19 +69,61 @@
     "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#LocationProperty",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#EquipmentTag",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Location Property"
+    "@value" : "Equipment Tag"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/core#Property"
+    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTag"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#Material",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material"
+    "@value" : "equipment tag group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#EquipmentType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanRole",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "human role"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanTag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Human Tag"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTag"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "human tag group"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanWorker",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "human worker"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
@@ -163,172 +136,80 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
-  }, {
-    "@id" : "https://saref.etsi.org/core#FeatureOfInterest"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#Worker",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Worker"
+    "@value" : "resource type"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "tracking tag"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#WorkerInTask",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Worker in Task"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#WorkerRole",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Worker Role"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#executesForTask",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#WorkerInTask"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "executes for task"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#Action"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasAccuracy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has accuracy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasIdentifier",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has identifier"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasStatus",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has status"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#involvesResource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/process#Task"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "involves resource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#isAssignedToTask",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "is assigned to task"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#measuredAt",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#LocationProperty"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "measured at"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2006/time#Interval"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#playsRole",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#WorkerInTask"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "plays role"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#WorkerRole"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#relatedTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "related to"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#WorkerInTask"
-  } ]
-}, {
-  "@id" : "https://saref.etsi.org/core#FeatureOfInterest",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Feature of Interest"
-  } ]
-}, {
-  "@id" : "https://saref.etsi.org/core#IMUSensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "IMU Sensor"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://saref.etsi.org/core#Sensor"
+    "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType"
   } ]
 }, {
-  "@id" : "https://saref.etsi.org/core#Property",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Property"
-  } ]
-}, {
-  "@id" : "https://saref.etsi.org/core#Sensor",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Sensor"
-  } ]
-}, {
-  "@id" : "https://saref.etsi.org/core#isPropertyOf",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#belongToType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#LocationProperty"
-  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "is property of"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
+    "@value" : "belong to type"
   } ]
 }, {
-  "@id" : "https://saref.etsi.org/core#relatesToProperty",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://saref.etsi.org/core#Sensor"
-  } ],
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#costPerHour",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "relates to property"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://saref.etsi.org/core#Property"
+    "@value" : "cost per hour"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has assigned resource"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasResourceType",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has resource type"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "has tracking tag"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#maxUnit",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "maximum number of units"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#resourceId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "resource identifier"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#resourceTypeId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "resource type identifier"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#status",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "status"
   } ]
 } ]

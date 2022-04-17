@@ -1,12 +1,9 @@
-Identifier,Component,Competency Question/Assertion,Answer,Status
-RESO-1,"PMS, WODM","Workers, equipment and materials are resources",,
-RESO-2,PMS,A resource is a spatial thing,,
-RESO-3,WODM,A resource has a location,,
-RESO-4,WODM,A worker has an identifier and a password,,
-RESO-5,WODM,A worker performs a role for a certain task,,
-RESO-6,WODM,A worker executes an action in a task,,
-RESO-7,WODM,A piece of equipment has a status,,
-RESO-8,IoT,A sensor measures the location,,
-RESO-9,IoT,"A location includes: altitude, longitude and latitude",,
-RESO-10,IoT,A location also includes the time of the measure,,
-RESO-11,IoT,A location includes the accuracy of the measure,,
+﻿Identifier;Competency Question / Fact
+RESO-1;Human worker, equipment and tracking trags are resources 
+RESO-2;A resource is a spatial thing 
+RESO-3;A resource belongs to a resource type
+RESO-4;Types of resources include roles, equipment type and tracking tag groups
+RESO-5;Tag groups include human and equipment
+RESO-6;Humans and Equipment can have a tracking tag assigned
+RESO-7;A type of resource has an identifier, a name, the maximum quantity and a cost per hour
+RESO-8;A resource has an identifier and a status
