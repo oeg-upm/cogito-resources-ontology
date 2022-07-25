@@ -15,7 +15,7 @@
         <dc:description>The COGITO Resource ontology aims at modelling resources in the construction domain.</dc:description>
         <dc:title>Resource ontology</dc:title>
         <terms:license rdf:resource="http://purl.org/NET/rdflicense/cc-by4.0"/>
-        <owl:versionInfo>0.2.0</owl:versionInfo>
+        <owl:versionInfo>0.5.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -72,20 +72,61 @@
     
 
 
-    <!-- https://cogito.iot.linkeddata.es/def/resource#belongToType -->
+    <!-- https://cogito.iot.linkeddata.es/def/process#hasAssignedResource -->
 
 
-    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#belongToType">
-        <rdfs:label>belong to type</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/process#hasAssignedResource">
+        <rdfs:range rdf:resource="https://cogito.iot.linkeddata.es/def/resource#Resource"/>
+        <rdfs:label>has assigned resource</rdfs:label>
     </owl:ObjectProperty>
     
 
 
-    <!-- https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource -->
+    <!-- https://cogito.iot.linkeddata.es/def/process#hasComponentTask -->
 
 
-    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#hasAssignedResource">
-        <rdfs:label>has assigned resource</rdfs:label>
+    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/process#hasComponentTask">
+        <rdfs:range rdf:resource="https://cogito.iot.linkeddata.es/def/process#Task"/>
+        <rdfs:label>has component task</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/process#hasMainProvider -->
+
+
+    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/process#hasMainProvider">
+        <rdfs:range rdf:resource="https://cogito.iot.linkeddata.es/def/resource#HumanWorker"/>
+        <rdfs:label>has main provider</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/process#hasResourceTypeAssignment -->
+
+
+    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/process#hasResourceTypeAssignment">
+        <rdfs:range rdf:resource="https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment"/>
+        <rdfs:label>has resource type assignment</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/resource#belongsToType -->
+
+
+    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#belongsToType">
+        <rdfs:range rdf:resource="https://cogito.iot.linkeddata.es/def/resource#ResourceType"/>
+        <rdfs:label>belongs to type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/resource#generatesData -->
+
+
+    <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#generatesData">
+        <rdfs:label>generates data</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -94,6 +135,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#hasResourceType">
+        <rdfs:range rdf:resource="https://cogito.iot.linkeddata.es/def/resource#ResourceType"/>
         <rdfs:label>has resource type</rdfs:label>
     </owl:ObjectProperty>
     
@@ -103,6 +145,7 @@
 
 
     <owl:ObjectProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag">
+        <rdfs:range rdf:resource="https://cogito.iot.linkeddata.es/def/resource#TrackingTag"/>
         <rdfs:label>has tracking tag</rdfs:label>
     </owl:ObjectProperty>
     
@@ -139,11 +182,29 @@
     
 
 
+    <!-- https://cogito.iot.linkeddata.es/def/resource#email -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#email">
+        <rdfs:label>email</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://cogito.iot.linkeddata.es/def/resource#maxUnit -->
 
 
     <owl:DatatypeProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#maxUnit">
         <rdfs:label>maximum number of units</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/resource#quantityNeeded -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#quantityNeeded">
+        <rdfs:label>quantity needed</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -192,6 +253,15 @@
 
     <owl:Class rdf:about="http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing">
         <rdfs:label>Spatial Thing</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/process#Process -->
+
+
+    <owl:Class rdf:about="https://cogito.iot.linkeddata.es/def/process#Process">
+        <rdfs:label>process</rdfs:label>
     </owl:Class>
     
 
@@ -308,6 +378,15 @@
 
     <owl:Class rdf:about="https://cogito.iot.linkeddata.es/def/resource#ResourceType">
         <rdfs:label>resource type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment -->
+
+
+    <owl:Class rdf:about="https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment">
+        <rdfs:label>Resource type assignment</rdfs:label>
     </owl:Class>
     
 
