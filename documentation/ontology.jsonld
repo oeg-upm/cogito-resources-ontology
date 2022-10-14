@@ -8,82 +8,49 @@
   "@id" : "http://purl.org/dc/elements/1.1/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "identifier"
+  } ]
+}, {
   "@id" : "http://purl.org/dc/terms/license",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Spatial Thing"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#Process",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "process"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#Task",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Task"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#WorkOrder",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "work order"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasAssignedResource",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has assigned resource"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasComponentTask",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has component task"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/process#Task"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasMainProvider",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has main provider"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanWorker"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#hasResourceTypeAssignment",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has resource type assignment"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/process#name",
+  "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "name"
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://purl.org/dc/terms/"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "title"
+  } ]
+}, {
+  "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://www.opengis.net/ont/geosparql#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Spatial Object"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/iot#TrackingTag",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A subclass of saref:Device and, as such, a tangible object designed to accomplish a particular task; in this case signalling its location"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tracking Tag"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/creator" : [ {
-    "@value" : "Alba Fernández Izquierdo"
+    "@value" : "María Poveda Villalón"
   }, {
     "@value" : "Raúl García Castro"
   }, {
@@ -99,11 +66,14 @@
     "@id" : "http://purl.org/NET/rdflicense/cc-by4.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.5.0"
+    "@value" : "0.7.0"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#Equipment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A subclass of resource:Resource used to assist in the performance of an activity (especially a process:Task)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Equipment"
   } ],
@@ -111,104 +81,70 @@
     "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#EquipmentTag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Equipment Tag"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTag"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "equipment tag group"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup"
-  } ]
-}, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#EquipmentType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanRole",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The different kinds of (construction) equipment"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "human role"
+    "@value" : "Equipment Type"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanTag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Human Tag"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTag"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "human tag group"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#HumanWorker",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "human worker"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A source of supply, support, or aid, especially one that can be readily drawn upon when needed; and from which a property is measured"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "Resource"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing"
+    "@id" : "http://www.opengis.net/ont/geosparql#SpatialObject"
+  }, {
+    "@id" : "https://saref.etsi.org/core#FeatureOfInterest"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The kind of resources assigned to a process:Task or involved in a process:Process"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "resource type"
+    "@value" : "Resource Type"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#Worker",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A human resource that works in a project (especially performing a process:Task)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Resource type assignment"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "tracking tag"
+    "@value" : "Worker"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cogito.iot.linkeddata.es/def/resource#Resource"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#WorkerRole",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "The different kinds of roles a human worker can play in a (construction) project"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Worker Role"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#belongsToType",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property that relates an entity (especilly a resource:Resource) to its resource:ResourceType"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "belongs to type"
   } ],
@@ -218,67 +154,58 @@
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#costPerHour",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property indicating the cost per hour of an entity (especially a resource:ResourceType)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "cost per hour"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#email",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property indicating the email of an entity (especially a resource:Worker)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "email"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#generatesData",
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasTackingTag",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "generates data"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasResourceType",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has resource type"
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A property that relates an entity (especilly a resource:Resource) to its iot:TrackingTag"
   } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#ResourceType"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has tracking tag"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://cogito.iot.linkeddata.es/def/resource#TrackingTag"
+    "@id" : "https://cogito.iot.linkeddata.es/def/iot#TrackingTag"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#maxUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "maximum number of units"
   } ]
 }, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#quantityNeeded",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "quantity needed"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#resourceId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "resource identifier"
-  } ]
-}, {
-  "@id" : "https://cogito.iot.linkeddata.es/def/resource#resourceTypeId",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "resource type identifier"
-  } ]
-}, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#status",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property indicating the status of an entity (especially a resource:Resource)"
+  } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "status"
+  } ]
+}, {
+  "@id" : "https://saref.etsi.org/core#FeatureOfInterest",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://saref.etsi.org/core#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Feature of Interest"
   } ]
 } ]

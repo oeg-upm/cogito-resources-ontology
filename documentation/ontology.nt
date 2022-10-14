@@ -1,11 +1,11 @@
 <https://cogito.iot.linkeddata.es/def/resource#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://cogito.iot.linkeddata.es/def/resource#> <http://purl.org/dc/elements/1.1/creator> "Alba Fernández Izquierdo" .
+<https://cogito.iot.linkeddata.es/def/resource#> <http://purl.org/dc/elements/1.1/creator> "María Poveda Villalón" .
 <https://cogito.iot.linkeddata.es/def/resource#> <http://purl.org/dc/elements/1.1/creator> "Raúl García Castro" .
 <https://cogito.iot.linkeddata.es/def/resource#> <http://purl.org/dc/elements/1.1/creator> "Socorro  Bernardos Galindo" .
 <https://cogito.iot.linkeddata.es/def/resource#> <http://purl.org/dc/elements/1.1/description> "The COGITO Resource ontology aims at modelling resources in the construction domain." .
 <https://cogito.iot.linkeddata.es/def/resource#> <http://purl.org/dc/elements/1.1/title> "Resource ontology" .
 <https://cogito.iot.linkeddata.es/def/resource#> <http://purl.org/dc/terms/license> <http://purl.org/NET/rdflicense/cc-by4.0> .
-<https://cogito.iot.linkeddata.es/def/resource#> <http://www.w3.org/2002/07/owl#versionInfo> "0.5.0" .
+<https://cogito.iot.linkeddata.es/def/resource#> <http://www.w3.org/2002/07/owl#versionInfo> "0.7.0" .
 # 
 # 
 # #################################################################
@@ -36,44 +36,17 @@
 # #################################################################
 # 
 # 
-# https://cogito.iot.linkeddata.es/def/process#hasAssignedResource
-<https://cogito.iot.linkeddata.es/def/process#hasAssignedResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cogito.iot.linkeddata.es/def/process#hasAssignedResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/resource#Resource> .
-<https://cogito.iot.linkeddata.es/def/process#hasAssignedResource> <http://www.w3.org/2000/01/rdf-schema#label> "has assigned resource" .
-# 
-# https://cogito.iot.linkeddata.es/def/process#hasComponentTask
-<https://cogito.iot.linkeddata.es/def/process#hasComponentTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cogito.iot.linkeddata.es/def/process#hasComponentTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/process#Task> .
-<https://cogito.iot.linkeddata.es/def/process#hasComponentTask> <http://www.w3.org/2000/01/rdf-schema#label> "has component task" .
-# 
-# https://cogito.iot.linkeddata.es/def/process#hasMainProvider
-<https://cogito.iot.linkeddata.es/def/process#hasMainProvider> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cogito.iot.linkeddata.es/def/process#hasMainProvider> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/resource#HumanWorker> .
-<https://cogito.iot.linkeddata.es/def/process#hasMainProvider> <http://www.w3.org/2000/01/rdf-schema#label> "has main provider" .
-# 
-# https://cogito.iot.linkeddata.es/def/process#hasResourceTypeAssignment
-<https://cogito.iot.linkeddata.es/def/process#hasResourceTypeAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cogito.iot.linkeddata.es/def/process#hasResourceTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment> .
-<https://cogito.iot.linkeddata.es/def/process#hasResourceTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "has resource type assignment" .
-# 
 # https://cogito.iot.linkeddata.es/def/resource#belongsToType
 <https://cogito.iot.linkeddata.es/def/resource#belongsToType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://cogito.iot.linkeddata.es/def/resource#belongsToType> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
+<https://cogito.iot.linkeddata.es/def/resource#belongsToType> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that relates an entity (especilly a resource:Resource) to its resource:ResourceType" .
 <https://cogito.iot.linkeddata.es/def/resource#belongsToType> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to type" .
 # 
-# https://cogito.iot.linkeddata.es/def/resource#generatesData
-<https://cogito.iot.linkeddata.es/def/resource#generatesData> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cogito.iot.linkeddata.es/def/resource#generatesData> <http://www.w3.org/2000/01/rdf-schema#label> "generates data" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#hasResourceType
-<https://cogito.iot.linkeddata.es/def/resource#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cogito.iot.linkeddata.es/def/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
-<https://cogito.iot.linkeddata.es/def/resource#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has resource type" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag
-<https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/resource#TrackingTag> .
-<https://cogito.iot.linkeddata.es/def/resource#hasTrackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "has tracking tag" .
+# https://cogito.iot.linkeddata.es/def/resource#hasTackingTag
+<https://cogito.iot.linkeddata.es/def/resource#hasTackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://cogito.iot.linkeddata.es/def/resource#hasTackingTag> <http://www.w3.org/2000/01/rdf-schema#range> <https://cogito.iot.linkeddata.es/def/iot#TrackingTag> .
+<https://cogito.iot.linkeddata.es/def/resource#hasTackingTag> <http://www.w3.org/2000/01/rdf-schema#comment> "A property that relates an entity (especilly a resource:Resource) to its iot:TrackingTag" .
+<https://cogito.iot.linkeddata.es/def/resource#hasTackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "has tracking tag" .
 # 
 # 
 # 
@@ -84,37 +57,34 @@
 # #################################################################
 # 
 # 
-# https://cogito.iot.linkeddata.es/def/process#name
-<https://cogito.iot.linkeddata.es/def/process#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://cogito.iot.linkeddata.es/def/process#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<https://cogito.iot.linkeddata.es/def/process#name> <http://www.w3.org/2000/01/rdf-schema#label> "name" .
+# http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/identifier> <http://www.w3.org/2000/01/rdf-schema#label> "identifier" .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://purl.org/dc/terms/> .
+<http://purl.org/dc/terms/title> <http://www.w3.org/2000/01/rdf-schema#label> "title" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#costPerHour
 <https://cogito.iot.linkeddata.es/def/resource#costPerHour> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cogito.iot.linkeddata.es/def/resource#costPerHour> <http://www.w3.org/2000/01/rdf-schema#comment> "Property indicating the cost per hour of an entity (especially a resource:ResourceType)" .
 <https://cogito.iot.linkeddata.es/def/resource#costPerHour> <http://www.w3.org/2000/01/rdf-schema#label> "cost per hour" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#email
 <https://cogito.iot.linkeddata.es/def/resource#email> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cogito.iot.linkeddata.es/def/resource#email> <http://www.w3.org/2000/01/rdf-schema#comment> "Property indicating the email of an entity (especially a resource:Worker)" .
 <https://cogito.iot.linkeddata.es/def/resource#email> <http://www.w3.org/2000/01/rdf-schema#label> "email" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#maxUnit
 <https://cogito.iot.linkeddata.es/def/resource#maxUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cogito.iot.linkeddata.es/def/resource#maxUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)" .
 <https://cogito.iot.linkeddata.es/def/resource#maxUnit> <http://www.w3.org/2000/01/rdf-schema#label> "maximum number of units" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#quantityNeeded
-<https://cogito.iot.linkeddata.es/def/resource#quantityNeeded> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://cogito.iot.linkeddata.es/def/resource#quantityNeeded> <http://www.w3.org/2000/01/rdf-schema#label> "quantity needed" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#resourceId
-<https://cogito.iot.linkeddata.es/def/resource#resourceId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://cogito.iot.linkeddata.es/def/resource#resourceId> <http://www.w3.org/2000/01/rdf-schema#label> "resource identifier" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#resourceTypeId
-<https://cogito.iot.linkeddata.es/def/resource#resourceTypeId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://cogito.iot.linkeddata.es/def/resource#resourceTypeId> <http://www.w3.org/2000/01/rdf-schema#label> "resource type identifier" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#status
 <https://cogito.iot.linkeddata.es/def/resource#status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://cogito.iot.linkeddata.es/def/resource#status> <http://www.w3.org/2000/01/rdf-schema#comment> "Property indicating the status of an entity (especially a resource:Resource)" .
 <https://cogito.iot.linkeddata.es/def/resource#status> <http://www.w3.org/2000/01/rdf-schema#label> "status" .
 # 
 # 
@@ -126,81 +96,55 @@
 # #################################################################
 # 
 # 
-# http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Thing" .
+# http://www.opengis.net/ont/geosparql#SpatialObject
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.opengis.net/ont/geosparql#> .
+<http://www.opengis.net/ont/geosparql#SpatialObject> <http://www.w3.org/2000/01/rdf-schema#label> "Spatial Object" .
 # 
-# https://cogito.iot.linkeddata.es/def/process#Process
-<https://cogito.iot.linkeddata.es/def/process#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/process#Process> <http://www.w3.org/2000/01/rdf-schema#label> "process" .
-# 
-# https://cogito.iot.linkeddata.es/def/process#Task
-<https://cogito.iot.linkeddata.es/def/process#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/process#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task" .
-# 
-# https://cogito.iot.linkeddata.es/def/process#WorkOrder
-<https://cogito.iot.linkeddata.es/def/process#WorkOrder> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/process#WorkOrder> <http://www.w3.org/2000/01/rdf-schema#label> "work order" .
+# https://cogito.iot.linkeddata.es/def/iot#TrackingTag
+<https://cogito.iot.linkeddata.es/def/iot#TrackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cogito.iot.linkeddata.es/def/iot#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of saref:Device and, as such, a tangible object designed to accomplish a particular task; in this case signalling its location" .
+<https://cogito.iot.linkeddata.es/def/iot#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "Tracking Tag" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#Equipment
 <https://cogito.iot.linkeddata.es/def/resource#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cogito.iot.linkeddata.es/def/resource#Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#Resource> .
+<https://cogito.iot.linkeddata.es/def/resource#Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "A subclass of resource:Resource used to assist in the performance of an activity (especially a process:Task)" .
 <https://cogito.iot.linkeddata.es/def/resource#Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#EquipmentTag
-<https://cogito.iot.linkeddata.es/def/resource#EquipmentTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#EquipmentTag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#TrackingTag> .
-<https://cogito.iot.linkeddata.es/def/resource#EquipmentTag> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment Tag" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup
-<https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup> .
-<https://cogito.iot.linkeddata.es/def/resource#EquipmentTagGroup> <http://www.w3.org/2000/01/rdf-schema#label> "equipment tag group" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#EquipmentType
 <https://cogito.iot.linkeddata.es/def/resource#EquipmentType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://cogito.iot.linkeddata.es/def/resource#EquipmentType> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#HumanRole
-<https://cogito.iot.linkeddata.es/def/resource#HumanRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanRole> <http://www.w3.org/2000/01/rdf-schema#label> "human role" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#HumanTag
-<https://cogito.iot.linkeddata.es/def/resource#HumanTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanTag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#TrackingTag> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanTag> <http://www.w3.org/2000/01/rdf-schema#label> "Human Tag" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup
-<https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanTagGroup> <http://www.w3.org/2000/01/rdf-schema#label> "human tag group" .
-# 
-# https://cogito.iot.linkeddata.es/def/resource#HumanWorker
-<https://cogito.iot.linkeddata.es/def/resource#HumanWorker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanWorker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#Resource> .
-<https://cogito.iot.linkeddata.es/def/resource#HumanWorker> <http://www.w3.org/2000/01/rdf-schema#label> "human worker" .
+<https://cogito.iot.linkeddata.es/def/resource#EquipmentType> <http://www.w3.org/2000/01/rdf-schema#comment> "The different kinds of (construction) equipment" .
+<https://cogito.iot.linkeddata.es/def/resource#EquipmentType> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment Type" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#Resource
 <https://cogito.iot.linkeddata.es/def/resource#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2003/01/geo/wgs84_pos#SpatialThing> .
+<https://cogito.iot.linkeddata.es/def/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.opengis.net/ont/geosparql#SpatialObject> .
+<https://cogito.iot.linkeddata.es/def/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://saref.etsi.org/core#FeatureOfInterest> .
+<https://cogito.iot.linkeddata.es/def/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "A source of supply, support, or aid, especially one that can be readily drawn upon when needed; and from which a property is measured" .
 <https://cogito.iot.linkeddata.es/def/resource#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource" .
 # 
 # https://cogito.iot.linkeddata.es/def/resource#ResourceType
 <https://cogito.iot.linkeddata.es/def/resource#ResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "resource type" .
+<https://cogito.iot.linkeddata.es/def/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "The kind of resources assigned to a process:Task or involved in a process:Process" .
+<https://cogito.iot.linkeddata.es/def/resource#ResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Type" .
 # 
-# https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment
-<https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#ResourceTypeAssignment> <http://www.w3.org/2000/01/rdf-schema#label> "Resource type assignment" .
+# https://cogito.iot.linkeddata.es/def/resource#Worker
+<https://cogito.iot.linkeddata.es/def/resource#Worker> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cogito.iot.linkeddata.es/def/resource#Worker> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#Resource> .
+<https://cogito.iot.linkeddata.es/def/resource#Worker> <http://www.w3.org/2000/01/rdf-schema#comment> "A human resource that works in a project (especially performing a process:Task)" .
+<https://cogito.iot.linkeddata.es/def/resource#Worker> <http://www.w3.org/2000/01/rdf-schema#label> "Worker" .
 # 
-# https://cogito.iot.linkeddata.es/def/resource#TrackingTag
-<https://cogito.iot.linkeddata.es/def/resource#TrackingTag> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#Resource> .
-<https://cogito.iot.linkeddata.es/def/resource#TrackingTag> <http://www.w3.org/2000/01/rdf-schema#label> "tracking tag" .
+# https://cogito.iot.linkeddata.es/def/resource#WorkerRole
+<https://cogito.iot.linkeddata.es/def/resource#WorkerRole> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://cogito.iot.linkeddata.es/def/resource#WorkerRole> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
+<https://cogito.iot.linkeddata.es/def/resource#WorkerRole> <http://www.w3.org/2000/01/rdf-schema#comment> "The different kinds of roles a human worker can play in a (construction) project" .
+<https://cogito.iot.linkeddata.es/def/resource#WorkerRole> <http://www.w3.org/2000/01/rdf-schema#label> "Worker Role" .
 # 
-# https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup
-<https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://cogito.iot.linkeddata.es/def/resource#TrackingTagGroup> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://cogito.iot.linkeddata.es/def/resource#ResourceType> .
+# https://saref.etsi.org/core#FeatureOfInterest
+<https://saref.etsi.org/core#FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://saref.etsi.org/core#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://saref.etsi.org/core#> .
+<https://saref.etsi.org/core#FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#label> "Feature of Interest" .
 # 
 # Generated by the OWL API (version 5.1.14) https://github.com/owlcs/owlapi/
