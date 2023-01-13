@@ -170,6 +170,15 @@
     "@value" : "email"
   } ]
 }, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#firstName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property indicating the first name of an entity (especially a resource:Worker)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "first name"
+  } ]
+}, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#hasTackingTag",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -180,6 +189,15 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://cogito.iot.linkeddata.es/def/iot#TrackingTag"
+  } ]
+}, {
+  "@id" : "https://cogito.iot.linkeddata.es/def/resource#lastName",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "Property indicating the last name of an entity (especially a resource:Worker)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "last name"
   } ]
 }, {
   "@id" : "https://cogito.iot.linkeddata.es/def/resource#maxUnit",

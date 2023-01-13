@@ -81,6 +81,18 @@
        rdfs:label "email" .
 
 
+###  https://cogito.iot.linkeddata.es/def/resource#firstName
+:firstName rdf:type owl:DatatypeProperty ;
+           rdfs:comment "Property indicating the first name of an entity (especially a resource:Worker)" ;
+           rdfs:label "first name" .
+
+
+###  https://cogito.iot.linkeddata.es/def/resource#lastName
+:lastName rdf:type owl:DatatypeProperty ;
+          rdfs:comment "Property indicating the last name of an entity (especially a resource:Worker)" ;
+          rdfs:label "last name" .
+
+
 ###  https://cogito.iot.linkeddata.es/def/resource#maxUnit
 :maxUnit rdf:type owl:DatatypeProperty ;
          rdfs:comment "Property indicating the maximum number of units of an entity (especially a resource:ResourceType)" ;

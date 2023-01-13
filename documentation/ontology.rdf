@@ -146,6 +146,26 @@
     
 
 
+    <!-- https://cogito.iot.linkeddata.es/def/resource#firstName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#firstName">
+        <rdfs:comment>Property indicating the first name of an entity (especially a resource:Worker)</rdfs:comment>
+        <rdfs:label>first name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://cogito.iot.linkeddata.es/def/resource#lastName -->
+
+
+    <owl:DatatypeProperty rdf:about="https://cogito.iot.linkeddata.es/def/resource#lastName">
+        <rdfs:comment>Property indicating the last name of an entity (especially a resource:Worker)</rdfs:comment>
+        <rdfs:label>last name</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- https://cogito.iot.linkeddata.es/def/resource#maxUnit -->
 
 

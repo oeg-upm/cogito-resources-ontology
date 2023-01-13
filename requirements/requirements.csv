@@ -1,9 +1,9 @@
-﻿Identifier;Competency Question / Fact
-RESO-1;Human workers and equipment are resources 
-RESO-2;A resource belongs to a resource type
-RESO-3;Types of resources include human roles and equipment types
-RESO-4;A type of resource has an identifier, a name, the maximum quantity and a cost per hour
-RESO-5;A resource has an identifier and a status
-RESO-6;Human workers have an email and pieces of equipment have a name
-RESO-7;Resources can have a tracking tag assigned
-RESO-8;A resource can have a tracking tag
+Identifier	Competency Question / Fact
+RESO-1	Human workers and equipment are resources 
+RESO-2	A resource belongs to a resource type
+RESO-3	Types of resources include human roles and equipment types
+RESO-4	A type of resource has an identifier, a name, the maximum quantity and a cost per hour
+RESO-5	A resource has an identifier and a status
+RESO-6	Human workers have an email, first name and last name, and pieces of equipment have a name
+RESO-7	Resources can have a tracking tag assigned
+RESO-8	A resource can have a tracking tag
