@@ -1,0 +1,67 @@
+@prefix : <http://example.org/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/ns#> .
+
+
+
+:Test1 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Resource hasTrackingTag TrackingTag" .
+
+:Test2 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Worker lastName string" .
+
+:Test3 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Worker firstName string" .
+
+:Test4 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Worker email string" .
+
+:Test5 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Resource status string" .
+
+:Test6 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Resource identifier literal" .
+
+:Test7 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "ResourceType costPerHour float" .
+
+:Test8 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "ResourceType maxUnit integer" .
+
+:Test9 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "ResourceType title string" .
+
+:Test10 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "ResourceType identifier literal" .
+
+:Test11 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "EquipmentType subClassOf ResourceType" .
+
+:Test12 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "WorkerRole subClassOf ResourceType" .
+
+:Test13 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Resource belongsToType ResourceType" .
+
+:Test14 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Equipment subClassOf Resource" .
+
+:Test15 rdf:type <https://w3id.org/def/vtc#TestCaseDesign> ,
+                owl:NamedIndividual ;
+       <https://w3id.org/def/vtc#desiredBehaviour> "Worker subClassOf Resource" .
